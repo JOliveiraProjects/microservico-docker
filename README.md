@@ -2,6 +2,20 @@
 
 ### Summário
 
+O projeto esta organizado por:
+
+O arquivo de projeto `ProjetosProducao.sln` abri todos os projetos juntos. Em cada pasta de projeto
+pode se abrir cada projeto isoladamente.
+
+* MicroServicos.Autentica.API
+  * Responsavel por gerar o token de acesso as demais APIs.
+  
+* MicroServicos.Gateway.API
+  * Faz o gerenciamento e a rota para todas as APIs.
+  
+* MicroServicos.Teste.API
+  * Projeto de teste para o compostamento e ação do serviço
+
 #### Azure
 
 * Azure Database for PostgreSQL servers
@@ -37,6 +51,7 @@ Sobe o arquivo `docker-compose_PROD.yml` no **Azure App Services**
 Usando o CI/CD do **Azure DevOps** segue o procedimento.
 
 ### Tecnologias usada
+ * Visual Studio 2019
  * .net core 2.2
  * postgresql
  * gateway ocelot
