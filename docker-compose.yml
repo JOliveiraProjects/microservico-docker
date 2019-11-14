@@ -1,0 +1,23 @@
+version: '3.4'
+
+services:
+  teste:
+    image: microservicostesteapi:dev
+    build:
+      context: .
+      dockerfile: ConsigaMais.Teste.API/Dockerfile
+    container_name: teste
+
+  autentica:
+    image: microservicosautenticaapi:dev
+    build:
+      context: .
+      dockerfile: ConsigaMais.Autentica.API/Dockerfile
+    container_name: autentica
+
+  gateway:
+    image: microservicosgatewayapi:dev
+    build:
+      context: .
+      dockerfile: ConsigaMais.Gateway.API/Dockerfile
+    container_name: gateway

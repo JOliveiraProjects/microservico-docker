@@ -1,0 +1,30 @@
+version: '3.4'
+
+services:
+  gateway:
+    image: microservicosgatewayapi.azurecr.io/microservicosgatewayapi:latest
+    container_name: gateway
+    environment:
+      - 'ASPNETCORE_ENVIRONMENT=Development'
+      - 'Secret=3ce1637ed40041cd94d4853d3e766c4d'
+    ports:
+      - "80:80"
+
+  autentica:
+    image: microservicosautenticaapi.azurecr.io/microservicosautenticaapi:latest
+    container_name: autentica
+    environment:
+      - 'ASPNETCORE_ENVIRONMENT=Development'
+      - 'Secret=3ce1637ed40041cd94d4853d3e766c4d'
+      - 'ConnectionStrings:Database=Server=localhost;Port=5432;Database=backoffice;User Id=admin@localhost;Password=root;SSL Mode=Require;'
+    ports:
+      - "80:80"
+
+  teste:
+    image: microservicostesteapi.azurecr.io/microservicostesteapi:latest
+    container_name: teste
+    environment:
+      - 'ASPNETCORE_ENVIRONMENT=Development'
+      - 'Secret=3ce1637ed40041cd94d4853d3e766c4d'
+    ports:
+      - "80:80"
