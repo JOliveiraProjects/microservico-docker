@@ -1,8 +1,18 @@
 # MicroServico
 
-### Summário ###
+### Summário
 
--- Docker build 
+#### Azure
+
+- Azure Database for PostgreSQL servers
+- Azure Container registries
+- Azure App Services 
+   - Publish 
+      - Docker Container
+
+
+
+#### Docker build
 
 - docker-compose up --build
 - docker login microservicos.azurecr.io -u <USUÁRIO> -p <SENHA>
@@ -10,9 +20,9 @@
 - docker pull microservicos.azurecr.io/<image_name>
  
  
--- CI/CD Azure DevOps
+#### CI/CD Azure DevOps
 
-### Tecnologias usada ###
+### Tecnologias usada
  - .net core 2.2
  - postgresql
  - gateway ocelot
