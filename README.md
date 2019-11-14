@@ -20,13 +20,13 @@ docker-compose up --build
 
 #### Subindo manualmente para o Azure
 
-Subindo as imagens para o Azure Container registries
+Subindo as imagens para o **Azure Container registries**
 
 ```sh
 
-docker login microservicos.azurecr.io -u <USUÁRIO> -p <SENHA>
-docker tag <image_name> microservicos.azurecr.io/<image_name>
-docker pull microservicos.azurecr.io/<image_name>
+docker login <AZURE_CONTAINER_REGISTRIES_NAME>.azurecr.io -u <USUARIO> -p <SENHA>
+docker tag <IMAGE_NAME>:<TAG> <AZURE_CONTAINER_REGISTRIES_NAME>.azurecr.io/<IMAGE_NAME>
+docker pull <AZURE_CONTAINER_REGISTRIES_NAME>.azurecr.io/<IMAGE_NAME>
 
 ```
    
