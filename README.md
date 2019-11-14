@@ -12,7 +12,7 @@ docker pull microservicos.azurecr.io/<image_name>
  
 -- CI/CD Azure DevOps
 
-###Tecnologias usada###
+### Tecnologias usada ###
  - .net core 2.2
  - postgresql
  - gateway ocelot
